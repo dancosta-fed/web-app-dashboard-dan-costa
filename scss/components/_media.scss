@@ -1,0 +1,43 @@
+/* ============================================= */
+/*              MEDIA QUERIES                    */
+/* ============================================= */
+
+// ==== FIX COLORS AND NUMBERS ===== //
+
+@media (min-width: 768px) {
+	.grid-container {
+		grid-template-columns: 55px 1fr;
+		grid-template-areas:
+			'header header'
+			'navigation main';
+	}
+
+	.main-container {
+		grid-template-columns: 1fr;
+	}
+
+	.widget-container-full {
+		width: 90vw;
+	}
+
+	.widget-container-half {
+		width: 45vw;
+	}
+
+	.social-container,
+	.traffic {
+		grid-column: 1 / span 2;
+	}
+
+	.members,
+	.message,
+	.daily {
+		grid-column: 1 / span 1;
+	}
+
+	.mobile-users,
+	.recent-activity,
+	.settings {
+		grid-column: 2 / span 1;
+	}
+}

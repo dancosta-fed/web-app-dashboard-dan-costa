@@ -1,0 +1,11 @@
+@mixin search-btn {
+    &:hover{
+        transition-duration: .1s;
+        transform: scale(1.12);
+        opacity: 0.9;
+    } 
+    &:focus {
+        border-color: $color-primary;
+    }
+}
+
