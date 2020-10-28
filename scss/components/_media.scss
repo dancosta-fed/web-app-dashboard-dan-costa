@@ -25,8 +25,9 @@
 
 	nav {
 		grid-area: navagation;
-		display: grid;
-		margin-top: 5px;
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
 	}
 
 	.navImg {
@@ -40,4 +41,64 @@
 		display: grid;
 	  }
 
+	main {
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		'dashboard dashboard'
+		'traffic traffic'
+		'daily trafficc mobile user'
+		'social stats social stats'
+		'newMembers recent activity'
+		'message user settings';
+	}
+
+	.traffic {
+		grid-area: traffic;
+	}
+
+	.socialStats {
+		grid-area: social stats;
+	}
+
+	.newMembers {
+		grid-area: newMembers;
+	}
+
+	.recentActivity {
+		grid-area: recent activity;
+	}
+
+	.messageUser {
+		grid-area: message user;
+	}
+
+	.settings {
+		grid-area: settings;
+	}
+
+	.widget-container-full {
+		width: 90vw;
+	}
+
+	.widget-container-half {
+		width: 45vw;
+	}
+
+
+	.socialStats,
+	.traffic {
+		grid-column: 1 / span 2;
+	}
+
+	.newMembers,
+	.messageUser,
+	.daily {
+		grid-column: 1 / span 1;
+	}
+
+	.mobileUsers,
+	.recentActivity,
+	.settings {
+		grid-column: 2 / span 1;
+	}
 }

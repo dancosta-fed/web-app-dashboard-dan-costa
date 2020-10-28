@@ -53,12 +53,22 @@ nav {
     align-items: center;
     justify-items: center;
     margin-top: 5px;
+    background-color: $complement;
 
 }
 
 main {
     grid-area: main;
     display: grid;
+    grid-template-columns: 1fr;
+}
+
+.widget-container-full {
+    width: 90vw;
+}
+
+.widget-container-half {
+    width: 90vw;
 }
 
 .navImg {
