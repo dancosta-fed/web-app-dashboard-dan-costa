@@ -344,7 +344,10 @@ template {
   font-family: "David Libre", Roboto;
   color: #fff;
   box-sizing: border-box;
-  background-color: #bbcfd9;
+}
+
+body {
+  background: #bbcfd9;
 }
 
 html {
@@ -389,21 +392,21 @@ body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "header" "navigation" "main";
+  grid-template-areas: "header" "navagation" "main";
 }
 
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 2fr auto 0.4fr;
+  grid-template-columns: 2fr auto 1fr;
   grid-template-rows: auto;
-  background-color: #f9b233;
+  background: #f9b233;
   color: #fff;
 }
 
 .appTitle {
-  margin-left: 2%;
   color: #fff;
+  margin: 0.5em 0.2em;
 }
 
 .profile-img {
@@ -413,6 +416,10 @@ header {
   align-self: center;
 }
 
+.imgProfile {
+  display: none;
+}
+
 .profileName {
   align-self: center;
   margin-left: 5%;
@@ -420,13 +427,23 @@ header {
 }
 
 nav {
-  grid-area: navigation;
-  margin-left: 35%;
-  margin-right: -25%;
+  grid-area: navagation;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 45px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 5px;
 }
 
 main {
   grid-area: main;
+  display: grid;
+}
+
+.navImg {
+  width: 30px;
+  height: 30px;
 }
 
 /* ============================================= */
@@ -442,13 +459,35 @@ main {
 /*              MEDIA QUERIES                    */
 /* ============================================= */
 @media (min-width: 768px) {
-  .grid-container {
+  body {
+    grid-area: body;
+    display: grid;
     grid-template-columns: 55px 1fr;
-    grid-template-areas: "header header" "navigation main";
+    grid-template-areas: "header header" "navagation main";
   }
 
-  .main-container {
-    grid-template-columns: 1fr;
+  header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr auto 0.5fr;
+    grid-template-rows: auto;
+  }
+
+  nav {
+    grid-area: navagation;
+    display: grid;
+    margin-top: 5px;
+  }
+
+  .navImg {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  .imgProfile {
+    display: grid;
   }
 
   .widget-container-full {

@@ -6,7 +6,10 @@
     font-family: $basefont;
     color: $color-text;
     box-sizing: border-box;
-    background-color: $color-background;
+  }
+
+  body {
+    background: $color-main;
   }
 
   html{

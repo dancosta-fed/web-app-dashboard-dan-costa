@@ -10,22 +10,22 @@ body {
     
     grid-template-areas:
     'header'
-    'navigation'
+    'navagation'
     'main';
 }
 
 header {
 	grid-area: header;
 	display: grid;
-	grid-template-columns: 2fr auto .4fr;
+	grid-template-columns: 2fr auto 1fr;
 	grid-template-rows: auto;
-	background-color: $color-primary;
+	background: $color-primary;
 	color: $color-text;
 }
 
 .appTitle {
-    margin-left: 2%;
     color: $color-text;
+    margin: .5em .2em;
 }
 
 .profile-img {
@@ -35,6 +35,10 @@ header {
     align-self: center;
   }
 
+  .imgProfile {
+    display: none;
+  }
+
 .profileName {
     align-self: center;
     margin-left: 5%;
@@ -42,19 +46,25 @@ header {
 }
 
 nav {
-    grid-area: navigation;
-    margin-left: 35%;
-    margin-right: -25%;
-	// display: grid;
-	// grid-template-columns: 1fr;
-	// grid-template-rows: 1fr 1fr 1fr 1fr;
-	// justify-items: start;
+    grid-area: navagation;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 45px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5px;
+
 }
 
 main {
     grid-area: main;
+    display: grid;
 }
 
+.navImg {
+    width: 30px;
+    height: 30px;
+}
 /* ============================================= */
 /*                    SVG                        */
 /* ============================================= */

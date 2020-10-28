@@ -5,16 +5,40 @@
 // ==== FIX COLORS AND NUMBERS ===== //
 
 @media (min-width: 768px) {
-	.grid-container {
+
+
+	body {
+		grid-area: body;
+		display: grid;
 		grid-template-columns: 55px 1fr;
+		
 		grid-template-areas:
-			'header header'
-			'navigation main';
+		'header header'
+		'navagation main';
+	}
+	header {
+		grid-area: header;
+		display: grid;
+		grid-template-columns: 2fr auto .5fr;
+		grid-template-rows: auto;
 	}
 
-	.main-container {
-		grid-template-columns: 1fr;
+	nav {
+		grid-area: navagation;
+		display: grid;
+		margin-top: 5px;
 	}
+
+	.navImg {
+		width: 30px;
+		height: 30px;
+		margin-top: 15px;
+		margin-left: 10px;
+	}
+
+	.imgProfile {
+		display: grid;
+	  }
 
 	.widget-container-full {
 		width: 90vw;
