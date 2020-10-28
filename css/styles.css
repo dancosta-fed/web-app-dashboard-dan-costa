@@ -489,31 +489,6 @@ main {
   .imgProfile {
     display: grid;
   }
-
-  .widget-container-full {
-    width: 90vw;
-  }
-
-  .widget-container-half {
-    width: 45vw;
-  }
-
-  .social-container,
-.traffic {
-    grid-column: 1/span 2;
-  }
-
-  .members,
-.message,
-.daily {
-    grid-column: 1/span 1;
-  }
-
-  .mobile-users,
-.recent-activity,
-.settings {
-    grid-column: 2/span 1;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
