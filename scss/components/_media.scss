@@ -2,7 +2,6 @@
 /*              MEDIA QUERIES                    */
 /* ============================================= */
 
-// ==== FIX COLORS AND NUMBERS ===== //
 
 @media (min-width: 768px) {
 
@@ -10,7 +9,7 @@
 	body {
 		grid-area: body;
 		display: grid;
-		grid-template-columns: 55px 1fr;
+		grid-template-columns: 65px 1fr;
 		
 		grid-template-areas:
 		'header header'
@@ -27,54 +26,17 @@
 		grid-area: navagation;
 		display: flex;
 		flex-direction: column;
-		align-items: baseline;
+		align-items: center;
 	}
 
 	.navImg {
-		width: 30px;
-		height: 30px;
-		margin-top: 15px;
-		margin-left: 10px;
+		width: 25px;
+		height: 25px;
 	}
 
 	.imgProfile {
 		display: grid;
 	  }
-
-	main {
-		grid-template-columns: 1fr;
-		grid-template-areas: 
-		'dashboard dashboard'
-		'traffic traffic'
-		'daily trafficc mobile user'
-		'social stats social stats'
-		'newMembers recent activity'
-		'message user settings';
-	}
-
-	.traffic {
-		grid-area: traffic;
-	}
-
-	.socialStats {
-		grid-area: social stats;
-	}
-
-	.newMembers {
-		grid-area: newMembers;
-	}
-
-	.recentActivity {
-		grid-area: recent activity;
-	}
-
-	.messageUser {
-		grid-area: message user;
-	}
-
-	.settings {
-		grid-area: settings;
-	}
 
 	.widget-container-full {
 		width: 90vw;
@@ -84,21 +46,22 @@
 		width: 45vw;
 	}
 
-
-	.socialStats,
-	.traffic {
-		grid-column: 1 / span 2;
+	main {
+		display: flex;
+		flex-direction: column;
 	}
 
+	.twoCollums {
+		display: flex;
+		flex-grow: 1;
+	}
+
+	.dailyTraffic,
+	.mobileUser,
 	.newMembers,
-	.messageUser,
-	.daily {
-		grid-column: 1 / span 1;
-	}
-
-	.mobileUsers,
 	.recentActivity,
+	.messageUser,
 	.settings {
-		grid-column: 2 / span 1;
+		flex-grow: 1;
 	}
 }

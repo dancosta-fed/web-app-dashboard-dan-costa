@@ -4,14 +4,26 @@
 
 .imgProfile {
   border-radius: 50%;
-	width: 35%;
+  width: 30%;
   cursor: pointer;
 }
 
 .navImg {
-  margin-top: 2%;
-  margin-left: 3%;
-	width: 3%;
-	height: 3%;
-	fill: $color-main;
+  margin-top: 100%;
+  fill: $color-main;
+  
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+}
+
+
+.profile-image {
+  border-radius: 50%;
+  width: 10%;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
