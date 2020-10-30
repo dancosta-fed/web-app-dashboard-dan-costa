@@ -44,16 +44,6 @@ header {
     color: $color-main;
 }
 
-nav {
-    grid-area: navagation;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 55px;
-    align-items: center;
-    justify-items: center;
-    background-color: $complement;
-
-}
 
 main {
     grid-area: main;
@@ -69,14 +59,88 @@ main {
     width: 90vw;
 }
 
+/* ============================================= */
+/*                    NAV                        */
+/* ============================================= */
+
+nav {
+    grid-area: navagation;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 55px;
+    align-items: center;
+    justify-items: center;
+    background-color: $complement;
+
+    a {
+        margin-bottom: 4vw;
+    }
+
+    a.active {
+        position: relative;
+        &:before {
+           height: 100%;
+           width: 3px;
+           background-color: $color-hover;
+           display: block;
+           content: ""; /* isso aqui é padrão de todo pseudo-elemento ter para funcionar */
+           left: 0;
+           top: 0;
+           bottom: 0;
+           position: absolute; /* a posição vai ser absoluta em relação ao item da lista */
+        }
+     }
+
+}
 .navImg {
     width: 25px;
     height: 25px;
 }
 
-a.nav:active {
-    border-left: 1px solid $color-primary;
-    height: 50px;
+/* ============================================= */
+/*              Dashboard/Search                 */
+/* ============================================= */
+
+
+.dashSearch {
+    display: grid;
+    grid-template-columns: .2fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'dashboard search';
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    margin-right: 5vw;
+}
+.dashboardSearch{
+    grid-area: search;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: end;
+    background-color: $color-dashboard;
+    display: flex;
+    border-left: solid 1px $color-border;
+    border-bottom: solid 1px $color-border;
+
+    input[type='search'] {
+        margin-left: auto;
+        width: 90%;
+        height: 50%;
+        align-self: center;
+    }
+}
+
+.searchBar {
+    width: 40%;
+    align-self: center;
+    flex: 1;
+    margin-left: 5vw;
+
 }
 
 /* ============================================= */

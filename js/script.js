@@ -57,4 +57,4 @@ let trafficChart = new Chart(trafficCanvas, {
 });
 
 
-console.log(trafficChart);
+console.log();
