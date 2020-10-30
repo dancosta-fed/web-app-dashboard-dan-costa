@@ -6,6 +6,10 @@
   border-radius: 50%;
   width: 30%;
   cursor: pointer;
+  
+  &:hover {
+    transform: scale(.80);
+  }
 }
 
 .navImg {

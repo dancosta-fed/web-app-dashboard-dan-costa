@@ -20,11 +20,11 @@ header {
 	grid-template-columns: 2fr auto 1fr;
 	grid-template-rows: auto;
 	background: $color-primary;
-	color: $color-text;
+	color: $color-main;
 }
 
 .appTitle {
-    color: $color-text;
+    color: $color-main;
     margin: .5em .2em;
 }
 
@@ -41,7 +41,7 @@ header {
 .profileName {
     align-self: center;
     margin-left: 5%;
-    color: $color-text;
+    color: $color-main;
 }
 
 nav {
@@ -58,6 +58,7 @@ nav {
 main {
     grid-area: main;
     display: grid;
+    margin-left: 21px;
 }
 
 .widget-container-full {
@@ -73,6 +74,69 @@ main {
     height: 25px;
 }
 
+a.nav:active {
+    border-left: 1px solid $color-primary;
+    height: 50px;
+}
+
+/* ============================================= */
+/*                 Alert Banner                  */
+/* ============================================= */
+
+.alert-banner {
+    margin-top: 20px;
+    max-width: 95%;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    display: flex;
+    background-color: $color-primary;
+}
+
+.alert-banner-text {
+    margin: 6px 15px 6px 15px;
+    color: $color-main;
+    align-self: center;
+    flex: 1;
+}
+
+.alert-banner-close {
+    margin: 6px 15px 6px 15px;
+    color: $color-main;
+
+    &:hover{
+        cursor: pointer;
+        color: $color-alert;
+    }
+}
+
+.alertB {
+    color: $color-main;
+}
+/* ============================================= */
+/*                    Traffic                    */
+/* ============================================= */
+
+.trafficNav {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 7%;
+    margin-bottom: 2%;
+}
+
+.trafficNav-link {
+    margin-right: 15px;
+    margin-left: 15px;
+
+    &:hover {
+        background-color: $color-hover;
+        color: $color-main;
+        border-radius: 15%;
+        padding: 1px 5px;
+        cursor: pointer;
+    }
+}
+
 /* ============================================= */
 /*                    Members                    */
 /* ============================================= */
@@ -80,17 +144,6 @@ main {
 .members-container,
 .activity-container {
     display: flex;
-    // &::after{
-    //     content: '';
-    //     width: 48%;
-    //     height: 1px;
-    //     background: $color-text;
-    //     display:inline-block;
-    //     position: absolute;
-    //     margin-bottom: 2px;
-    //     margin-top: 2px;
-    // }
-    
 }
 
 .names,
@@ -102,10 +155,7 @@ main {
 .activity-text {
     flex-grow: 2;
 }
-// .arrow {
-//     flex-grow: 1;
-//     align-self: center;
-// }
+
 
 /* ============================================= */
 /*                    SVG                        */
@@ -114,4 +164,9 @@ main {
 
 .bell {
     align-self: center;
+    
+    &:hover{
+        cursor: pointer;
+        transform: scale(.80);
+    }
 }

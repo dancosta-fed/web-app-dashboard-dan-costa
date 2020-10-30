@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-        <h1 class="appTitle"><strong>DanCosta</strong>App&trade;</h1>
+        <h1 class="appTitle"><strong class="appTitle">DanCosta</strong>App&trade;</h1>
             <div class="bell"style="width: 35px; height: 35px">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -33,15 +33,15 @@
 			</div>
     </header>
     <nav>
-        <a><img src="icons/icon-dashboard.svg" alt="icon-dashboard" class="navImg"/></a>
-        <a><img src="icons/icon-members.svg" alt="members" class="navImg" /></a>
-        <a><img src="icons/icon-visits.svg" alt="visits" class="navImg" /></a>
-        <a><img src="icons/icon-settings.svg" alt="settings" class="navImg" /></a>
+        <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt="icon-dashboard" class="navImg"/></a>
+        <a href="#daily-mobileUsers"><img src="icons/icon-members.svg" alt="members" class="navImg" /></a>
+        <a href="#socialStats"><img src="icons/icon-visits.svg" alt="visits" class="navImg" /></a>
+        <a href="#settings"><img src="icons/icon-settings.svg" alt="settings" class="navImg" /></a>
     </nav>
 
     <main>
         
-        <section class= "dashboard"> 
+        <section class= "dashboard" id="dashboard"> 
             <h2 class="headline">Dashboard</h2> <!-- Grid row -->
             <span class="dashboardSearch">
                 <input type="search" placeholder="Search..." class="searchBar" />
@@ -72,7 +72,7 @@
 
         </section>
         
-        <section class="twoCollums"> <!-- Grid row -->
+        <section class="twoCollums" id="daily-mobileUsers"> <!-- Grid row -->
 
             <div class="dailyTraffic">
 
@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class= "socialStats"> <!-- Grid row -->
+        <section class= "socialStats" id="socialStats"> <!-- Grid row -->
 
             <div class="social-image">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -200,7 +200,7 @@
 
         </section>
 
-        <section class="twoCollums"> <!-- Grid row -->
+        <section class="twoCollums" id="settings"> <!-- Grid row -->
 
             <div class="newMembers">
                 <h3>New Members</h3>
@@ -351,9 +351,7 @@
         </section>
 
     </main>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
-  <footer>
-
-  </footer>
+</html>

@@ -342,12 +342,12 @@ template {
 /* ============================================= */
 * {
   font-family: "David Libre", Roboto;
-  color: #fff;
+  color: #686868;
   box-sizing: border-box;
 }
 
 body {
-  background: #bbcfd9;
+  background: #fff;
 }
 
 html {
@@ -375,10 +375,13 @@ footer {
   width: 30%;
   cursor: pointer;
 }
+.imgProfile:hover {
+  transform: scale(0.8);
+}
 
 .navImg {
   margin-top: 100%;
-  fill: #bbcfd9;
+  fill: #fff;
 }
 .navImg:hover {
   cursor: pointer;
@@ -410,7 +413,7 @@ header {
   display: grid;
   grid-template-columns: 2fr auto 1fr;
   grid-template-rows: auto;
-  background: #f9b233;
+  background: #7477bf;
   color: #fff;
 }
 
@@ -442,12 +445,13 @@ nav {
   grid-template-rows: 55px;
   align-items: center;
   justify-items: center;
-  background-color: #6b33f9;
+  background-color: #4d4c72;
 }
 
 main {
   grid-area: main;
   display: grid;
+  margin-left: 21px;
 }
 
 .widget-container-full {
@@ -461,6 +465,66 @@ main {
 .navImg {
   width: 25px;
   height: 25px;
+}
+
+a.nav:active {
+  border-left: 1px solid #7477bf;
+  height: 50px;
+}
+
+/* ============================================= */
+/*                 Alert Banner                  */
+/* ============================================= */
+.alert-banner {
+  margin-top: 20px;
+  max-width: 95%;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  display: flex;
+  background-color: #7477bf;
+}
+
+.alert-banner-text {
+  margin: 6px 15px 6px 15px;
+  color: #fff;
+  align-self: center;
+  flex: 1;
+}
+
+.alert-banner-close {
+  margin: 6px 15px 6px 15px;
+  color: #fff;
+}
+.alert-banner-close:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.alertB {
+  color: #fff;
+}
+
+/* ============================================= */
+/*                    Traffic                    */
+/* ============================================= */
+.trafficNav {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  margin-right: 7%;
+  margin-bottom: 2%;
+}
+
+.trafficNav-link {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.trafficNav-link:hover {
+  background-color: #81c98f;
+  color: #fff;
+  border-radius: 15%;
+  padding: 1px 5px;
+  cursor: pointer;
 }
 
 /* ============================================= */
@@ -486,6 +550,10 @@ main {
 /* ============================================= */
 .bell {
   align-self: center;
+}
+.bell:hover {
+  cursor: pointer;
+  transform: scale(0.8);
 }
 
 /* ============================================= */
