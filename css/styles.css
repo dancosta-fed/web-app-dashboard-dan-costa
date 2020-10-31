@@ -537,9 +537,6 @@ nav a.active:before {
   border-radius: 3px;
   border-top: 1px;
 }
-.searchBar:hover {
-  transform: scale(1.08);
-}
 
 .searchBar::after {
   content: "";
@@ -551,6 +548,9 @@ nav a.active:before {
   font-size: 0.55em;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  position: absolute;
+  right: 87px;
+  top: 96px;
 }
 
 /* ============================================= */

@@ -147,9 +147,9 @@ nav {
     border-radius: 3px;
     border-top: 1px;
 
-    &:hover {
-        transform: scale(1.08);
-    }
+    // &:hover {
+    //     transform: scale(1.08);
+    // }
 }
 
 .searchBar::after {
@@ -165,6 +165,11 @@ nav {
 
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+
+    position: absolute;
+    right: 87px;
+    top: 96px;
+    
 }
 
 /* ============================================= */
