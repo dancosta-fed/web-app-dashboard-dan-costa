@@ -47,6 +47,12 @@
 		margin-right: 3vw;
 	}
 
+	.searchBar::after {
+		position: absolute;
+		right: 87px;
+		top: 96px;
+	}
+
 	.alert-banner-close {
 		margin: 6px 15px 6px 15px;
 	}

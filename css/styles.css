@@ -549,8 +549,8 @@ nav a.active:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   position: absolute;
-  right: 87px;
-  top: 96px;
+  right: 40px;
+  top: 151px;
 }
 
 /* ============================================= */
@@ -674,6 +674,12 @@ nav a.active:before {
   .searchBar {
     margin-left: 55vw;
     margin-right: 3vw;
+  }
+
+  .searchBar::after {
+    position: absolute;
+    right: 87px;
+    top: 96px;
   }
 
   .alert-banner-close {
