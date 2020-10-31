@@ -135,12 +135,36 @@ nav {
     }
 }
 
+.searchBar1 {
+    border-radius: 4px;
+}
+
 .searchBar {
     width: 40%;
     align-self: center;
     flex: 1;
     margin-left: 5vw;
+    border-radius: 3px;
+    border-top: 1px;
 
+    &:hover {
+        transform: scale(1.08);
+    }
+}
+
+.searchBar::after {
+    
+    content: "\f002";
+    display: inline-block;
+    
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-style: normal;
+    font-variant: normal;
+    font-size: .55em;
+
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ============================================= */
@@ -164,7 +188,7 @@ nav {
 }
 
 .alert-banner-close {
-    margin: 6px 15px 6px 15px;
+    margin-right: 3vw;
     color: $color-main;
 
     &:hover{
