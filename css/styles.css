@@ -528,6 +528,11 @@ nav a.active:before {
 .searchBar1 {
   border-radius: 4px;
 }
+.searchBar1:hover {
+  color: #7477bf;
+  border-width: 3px;
+  color: #7477bf;
+}
 
 .searchBar {
   width: 40%;
@@ -536,6 +541,11 @@ nav a.active:before {
   margin-left: 5vw;
   border-radius: 3px;
   border-top: 1px;
+}
+.searchBar:hover {
+  color: #7477bf;
+  border-width: 90px;
+  transition: background-color 0.5s;
 }
 
 .searchBar::after {
