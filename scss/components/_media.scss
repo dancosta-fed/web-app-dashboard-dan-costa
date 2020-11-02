@@ -73,6 +73,8 @@
 	.twoCollums {
 		display: flex;
 		flex-grow: 1;
+		border-top: solid 1px $color-border;
+		border-bottom: solid 1px $color-border;
 	}
 
 	.dailyTraffic,
@@ -81,7 +83,7 @@
 	.recentActivity,
 	.messageUser,
 	.settings {
-		flex-grow: 1;
+		flex: 1;
 	}
 }
 
@@ -89,16 +91,9 @@
 
 .chartjs-render-monitor {
 	margin-left: 2vw;
-	// padding-right: 3vw;
 }
 
 // === DAILY AND MOBILE === //
-
-.twoCollums {
-    border-top: solid 1px $color-border;
-	border-bottom: solid 1px $color-border;
-	margin-top: 2vw;
-}
 
 .mobile {
 	margin-bottom: 2vw;
@@ -106,4 +101,11 @@
 
 .dailyTraffic {
 	border-right: solid 1px $color-border;
+}
+
+// === WIDGETS === //
+
+.widget-container {
+    width: 75%;
+    margin-left: 7vw;
 }

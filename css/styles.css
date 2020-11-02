@@ -475,6 +475,10 @@ h3 {
   margin-left: 2vw;
 }
 
+a {
+  color: #7477bf;
+}
+
 /* ============================================= */
 /*                    NAV                        */
 /* ============================================= */
@@ -691,16 +695,75 @@ nav a.active:before {
 .members-container,
 .activity-container {
   display: flex;
+  align-items: center;
 }
 
 .names,
-.activity-text {
+.activity-text,
+.members-text {
   margin-bottom: 0;
 }
 
 .members-text,
 .activity-text {
   flex-grow: 2;
+}
+
+.pMember {
+  margin: 0;
+}
+
+.newMembers {
+  border: solid 1px #ededed;
+}
+
+.activityDate {
+  margin-right: 20px;
+  font-size: 0.85em;
+}
+
+/* ============================================= */
+/*               MESSAGE USER                    */
+/* ============================================= */
+input[id=userField],
+textarea[id=messageField] {
+  width: 100%;
+  margin: 5px 0;
+  background-color: #fbfbfb;
+  border-radius: 4px;
+}
+input[id=userField]:hover,
+textarea[id=messageField]:hover {
+  color: #7477bf;
+  border-width: 0.25em;
+  transition: background-color 0.5s;
+}
+
+input[id=userField] {
+  padding: 9px;
+}
+
+textarea[id=messageField] {
+  height: 8vw;
+  margin-bottom: 15px;
+}
+
+button[id=send] {
+  width: 100%;
+  padding: 5px 0;
+  background-color: #7477bf;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+button[id=send]:hover {
+  cursor: pointer;
+  color: #e2e3f6;
+}
+
+.widget-container {
+  width: 75%;
+  margin-left: 10vw;
 }
 
 /* ============================================= */
@@ -778,6 +841,8 @@ nav a.active:before {
   .twoCollums {
     display: flex;
     flex-grow: 1;
+    border-top: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
   }
 
   .dailyTraffic,
@@ -786,17 +851,11 @@ nav a.active:before {
 .recentActivity,
 .messageUser,
 .settings {
-    flex-grow: 1;
+    flex: 1;
   }
 }
 .chartjs-render-monitor {
   margin-left: 2vw;
-}
-
-.twoCollums {
-  border-top: solid 1px #ededed;
-  border-bottom: solid 1px #ededed;
-  margin-top: 2vw;
 }
 
 .mobile {
@@ -805,6 +864,11 @@ nav a.active:before {
 
 .dailyTraffic {
   border-right: solid 1px #ededed;
+}
+
+.widget-container {
+  width: 75%;
+  margin-left: 7vw;
 }
 
 /*# sourceMappingURL=styles.css.map */
