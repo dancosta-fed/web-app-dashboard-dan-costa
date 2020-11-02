@@ -342,7 +342,7 @@ template {
 /*              Base styles                      */
 /* ============================================= */
 * {
-  font-family: "David Libre", Roboto;
+  font-family: Montserrat, Roboto;
   color: #686868;
   box-sizing: border-box;
 }
@@ -369,7 +369,7 @@ footer {
 }
 
 /* ============================================= */
-/*              Images                           */
+/*                    Images                     */
 /* ============================================= */
 .imgProfile {
   border-radius: 50%;
@@ -390,12 +390,31 @@ footer {
 }
 
 .profile-image {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  width: 10%;
   cursor: pointer;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+.socialImg {
+  background-color: #7477bf;
+  border-radius: 50%;
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+
+svg {
+  width: 30px;
+  height: auto;
+}
+
+.svgColor {
+  fill: #fff;
 }
 
 /* ============================================= */
@@ -442,7 +461,6 @@ header {
 main {
   grid-area: main;
   display: grid;
-  margin-left: 21px;
 }
 
 .widget-container-full {
@@ -451,6 +469,10 @@ main {
 
 .widget-container-half {
   width: 90vw;
+}
+
+h3 {
+  margin-left: 2vw;
 }
 
 /* ============================================= */
@@ -505,6 +527,7 @@ nav a.active:before {
 .dashboard {
   grid-area: dashboard;
   margin-right: 5vw;
+  margin-left: 2vw;
 }
 
 .dashboardSearch {
@@ -515,8 +538,8 @@ nav a.active:before {
   justify-content: end;
   background-color: #fbfbfb;
   display: flex;
-  border-left: solid 1px #e5e1e1;
-  border-bottom: solid 1px #e5e1e1;
+  border-left: solid 1px #ededed;
+  border-bottom: solid 1px #ededed;
 }
 .dashboardSearch input[type=search] {
   margin-left: auto;
@@ -559,15 +582,16 @@ nav a.active:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   position: absolute;
-  right: 40px;
-  top: 151px;
+  right: 30px;
+  top: 163px;
 }
 
 /* ============================================= */
 /*                 Alert Banner                  */
 /* ============================================= */
 .alert-banner {
-  margin-top: 20px;
+  margin-top: 2vw;
+  margin-left: 1vw;
   max-width: 95%;
   border: solid 1px #ccc;
   border-radius: 10px;
@@ -619,6 +643,49 @@ nav a.active:before {
 }
 
 /* ============================================= */
+/*                 Daily/Mobile                  */
+/* ============================================= */
+/* ============================================= */
+/*                 Social Stats                  */
+/* ============================================= */
+.socialWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.social-container {
+  cursor: pointer;
+  display: flex;
+  flex-basis: 248px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fbfbfb;
+  margin: 10px;
+  border: solid 1px #ededed;
+  border-radius: 4px;
+}
+
+.social-text {
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.social-text p:first-child {
+  color: #7477bf;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.89em;
+}
+.social-text p:last-child {
+  font-size: 2.7em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ============================================= */
 /*                    Members                    */
 /* ============================================= */
 .members-container,
@@ -644,7 +711,6 @@ nav a.active:before {
 }
 .bell:hover {
   cursor: pointer;
-  transform: scale(0.8);
 }
 
 /* ============================================= */
@@ -722,6 +788,23 @@ nav a.active:before {
 .settings {
     flex-grow: 1;
   }
+}
+.chartjs-render-monitor {
+  margin-left: 2vw;
+}
+
+.twoCollums {
+  border-top: solid 1px #ededed;
+  border-bottom: solid 1px #ededed;
+  margin-top: 2vw;
+}
+
+.mobile {
+  margin-bottom: 2vw;
+}
+
+.dailyTraffic {
+  border-right: solid 1px #ededed;
 }
 
 /*# sourceMappingURL=styles.css.map */

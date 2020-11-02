@@ -1,5 +1,5 @@
 /* ============================================= */
-/*              Images                           */
+/*                    Images                     */
 /* ============================================= */
 
 .imgProfile {
@@ -24,10 +24,32 @@
 
 
 .profile-image {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  width: 10%;
   cursor: pointer;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
+  
+}
+
+// Social Stats 
+
+.socialImg {
+  background-color: $color-primary;
+  border-radius: 50%;
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+}
+
+svg {
+  width: 30px;
+  height: auto;
+}
+
+.svgColor{
+  fill: $color-main;
 }
