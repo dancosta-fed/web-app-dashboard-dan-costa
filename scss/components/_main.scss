@@ -13,13 +13,14 @@ body {
     grid-template-areas:
     'header'
     'navagation'
-    'main';
+    'main'
+    'footer';
 }
 
 header {
 	grid-area: header;
 	display: grid;
-	grid-template-columns: 2fr auto 1fr;
+	grid-template-columns: 2fr auto 1fr auto;
 	grid-template-rows: auto;
 	background: $color-primary;
 	color: $color-main;
@@ -66,6 +67,12 @@ h3 {
 
 a {
     color: $color-primary;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    margin-top: 10px;
 }
 
 /* ============================================= */
