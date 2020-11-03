@@ -28,6 +28,7 @@ header {
 .appTitle {
     color: $color-main;
     margin: .5em .2em;
+    align-self: center;
 }
 
 .profile-img {
@@ -45,7 +46,6 @@ header {
     margin-left: 5%;
     color: $color-main;
 }
-
 
 main {
     grid-area: main;
