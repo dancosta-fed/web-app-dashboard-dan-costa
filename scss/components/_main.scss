@@ -372,10 +372,41 @@ button[id='send'] {
     width: 75%;
     margin-left: 10vw;
 }
+
+.messageUser{
+    border-right: solid 1px $color-border;
+}
 /* ============================================= */
 /*                  SETTINGS                     */
 /* ============================================= */
 
+// Switch Buttons
+
+.settings {
+    width: 100%;
+}
+
+.settingBlock {
+    height: 300px;
+    flex: 1;
+}
+
+
+
+.notifications {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.notifications label {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+// TimeZone
 select[id='timezone'] {
     width: 100%;
 

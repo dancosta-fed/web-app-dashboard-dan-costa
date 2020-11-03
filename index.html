@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <script src="https://kit.fontawesome.com/a2164cb399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+    <!-- <link rel="stylesheet" href="css/toggle-switch-rem.css"> -->
   </head>
   <body>
     <header>
@@ -329,29 +329,35 @@
 				</form>
 
             </div>
-            <div class="settings">
-                <h3>Settings</h3>
+            
+            <div class="settingBlock">
+                <section class="settings" id="sett">
+                    <h3>Settings</h3>
 
-				<p>Send Email Notifications</p>
-				<label class="switchBtn" onclick="">
-					<input type="checkbox" />
-					<span>
-						<span>Off</span>
-						<span>On</span>
-						<a></a>
-					</span>
-				</label>
-
-				<p>Set Profile to Public</p>
-				<label class="switchBtn" onclick="">
-					<input type="checkbox" />
-					<span>
-						<span>Off</span>
-						<span>On</span>
-						<a></a>
-					</span>
-				</label>
-
+                    <!-- Custom CSS Toggle code -->
+                    <div class="notifications">
+                        <p>Send Email Notifications</p>
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox" id="emailNotification">
+                            <span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="notifications">
+                        <p>Set Profile to Public</p>
+                        <label class="switch-light switch-ios" onclick="">
+                            <input type="checkbox" id="profilePublic">
+                            <span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                            </span>
+                        </label>
+                    </div>
+             
 				<select class="form=field" id="timezone">
 					<option>Select a Timezone</option>
                     <option>NZDT</option>
