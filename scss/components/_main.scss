@@ -354,20 +354,6 @@ textarea[id='messageField'] {
     margin-bottom: 15px;
 }
 
-button[id='send'] {
-    width: 100%;
-    padding: 5px 0;
-    background-color: $color-primary;
-    color: $color-main;
-    border: none;
-    border-radius: 4px;
-
-    &:hover {
-        cursor: pointer;
-        color: $color-primary-light;
-    }
-}
-
 .widget-container {
     width: 75%;
     margin-left: 10vw;
@@ -383,12 +369,13 @@ button[id='send'] {
 // Switch Buttons
 
 .settings {
-    width: 100%;
+    width: 90%;
 }
 
 .settingBlock {
     height: 300px;
     flex: 1;
+    display: flex;
 }
 
 
@@ -398,23 +385,81 @@ button[id='send'] {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
 
 .notifications label {
-    width: 70px;
+    width: 106px;
     margin-bottom: 10px;
 }
 
 // TimeZone
 select[id='timezone'] {
-    width: 100%;
+    width: 85%;
+    margin-left: 10vw;
 
 
     &:hover {
         cursor: pointer;
     }
   }
+
+/* ============================================= */
+/*                    BUTTONS                    */
+/* ============================================= */
+
+button[id='btn'] {
+    padding: 5px 0;
+    color: $color-main;
+    border: none;
+    border-radius: 4px;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-primary-light;
+    }
+}
+
+.send {
+    background-color: $color-primary;
+    width: 100%;
+}
+  .settings-button {
+    margin-left: 10vw;
+ } 
+
+.button-primary {
+    width: 40%;
+    margin-top: 10px;
+    background-color: $color-primary;
+}
+.button-disabled {
+    width: 40%;
+    margin-top: 10px;
+    background-color: $color-switchbtn;
+}
+
+select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-image: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 6px;
+    border: 1px solid $color-switchbtn;
+    border-radius: 4px;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    padding-right: 0.5rem;
+    padding-right: 2rem;
+}
 
 
 

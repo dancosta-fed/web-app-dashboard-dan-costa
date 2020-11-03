@@ -325,7 +325,7 @@
 						class="form-area"
 						id="messageField"
 					></textarea>
-					<button class="button-primary" id="send">Send</button>
+					<button class="send"id="btn">Send</button>
 				</form>
 
             </div>
@@ -333,31 +333,31 @@
             <div class="settingBlock">
                 <section class="settings" id="sett">
                     <h3>Settings</h3>
-
-                    <!-- Custom CSS Toggle code -->
-                    <div class="notifications">
-                        <p>Send Email Notifications</p>
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox" id="emailNotification">
-                            <span>
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                            </span>
-                        </label>
-                    </div>
-                    <div class="notifications">
-                        <p>Set Profile to Public</p>
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox" id="profilePublic">
-                            <span>
-                            <span>Off</span>
-                            <span>On</span>
-                            <a></a>
-                            </span>
-                        </label>
-                    </div>
-             
+                        <div class="setNotifications">
+                            <!-- Custom CSS Toggle code -->
+                            <div class="notifications">
+                                <p>Send Email Notifications</p>
+                                <label class="switch-light switch-ios" onclick="">
+                                    <input type="checkbox" id="emailNotification">
+                                    <span>
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="notifications">
+                                <p>Set Profile to Public</p>
+                                <label class="switch-light switch-ios" onclick="">
+                                    <input type="checkbox" id="profilePublic">
+                                    <span>
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
 				<select class="form=field" id="timezone">
 					<option>Select a Timezone</option>
                     <option>NZDT</option>
@@ -366,8 +366,8 @@
 				</select>
 
 				<div class="settings-button">
-					<button class="button-primary">Save</button>
-					<button class="button-disabled">Cancel</button>
+					<button id="btn"class="button-primary">Save</button>
+					<button id="btn"class="button-disabled">Cancel</button>
                 </div>
             </div>
         </section>

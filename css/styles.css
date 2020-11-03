@@ -748,19 +748,6 @@ textarea[id=messageField] {
   margin-bottom: 15px;
 }
 
-button[id=send] {
-  width: 100%;
-  padding: 5px 0;
-  background-color: #7477bf;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-}
-button[id=send]:hover {
-  cursor: pointer;
-  color: #e2e3f6;
-}
-
 .widget-container {
   width: 75%;
   margin-left: 10vw;
@@ -774,12 +761,13 @@ button[id=send]:hover {
 /*                  SETTINGS                     */
 /* ============================================= */
 .settings {
-  width: 100%;
+  width: 90%;
 }
 
 .settingBlock {
   height: 300px;
   flex: 1;
+  display: flex;
 }
 
 .notifications {
@@ -787,18 +775,76 @@ button[id=send]:hover {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .notifications label {
-  width: 70px;
+  width: 106px;
   margin-bottom: 10px;
 }
 
 select[id=timezone] {
-  width: 100%;
+  width: 85%;
+  margin-left: 10vw;
 }
 select[id=timezone]:hover {
   cursor: pointer;
+}
+
+/* ============================================= */
+/*                    BUTTONS                    */
+/* ============================================= */
+button[id=btn] {
+  padding: 5px 0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+button[id=btn]:hover {
+  cursor: pointer;
+  color: #e2e3f6;
+}
+
+.send {
+  background-color: #7477bf;
+  width: 100%;
+}
+
+.settings-button {
+  margin-left: 10vw;
+}
+
+.button-primary {
+  width: 40%;
+  margin-top: 10px;
+  background-color: #7477bf;
+}
+
+.button-disabled {
+  width: 40%;
+  margin-top: 10px;
+  background-color: #b2b2b2;
+}
+
+select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-image: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 6px;
+  border: 1px solid #b2b2b2;
+  border-radius: 4px;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+  padding-right: 2rem;
 }
 
 /* ============================================= */
@@ -888,24 +934,43 @@ select[id=timezone]:hover {
 .settings {
     flex: 1;
   }
-}
-.chartjs-render-monitor {
-  margin-left: 2vw;
-}
 
-.mobile {
-  margin-bottom: 2vw;
-}
+  .chartjs-render-monitor {
+    margin-left: 2vw;
+  }
 
-.dailyTraffic {
-  border-right: solid 1px #ededed;
-}
+  .mobile {
+    margin-bottom: 2vw;
+  }
 
-.widget-container {
-  width: 75%;
-  margin-left: 7vw;
-}
+  .dailyTraffic {
+    border-right: solid 1px #ededed;
+  }
 
+  .widget-container {
+    width: 75%;
+    margin-left: 7vw;
+  }
+
+  .notifications {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .notifications p {
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  select[id=timezone] {
+    width: 85%;
+    margin-left: 4vw;
+  }
+
+  .settings-button {
+    margin-left: 4vw;
+  }
+}
 /*
 * CSS TOGGLE SWITCH
 *
@@ -1293,6 +1358,7 @@ select[id=timezone]:hover {
   }
 
   .switch-ios.switch-light > span span {
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;

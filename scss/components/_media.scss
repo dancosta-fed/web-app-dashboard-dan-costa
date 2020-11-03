@@ -36,6 +36,7 @@
 		height: 25px;
 	}
 
+
 	.imgProfile {
 		display: grid;
 	  }
@@ -85,27 +86,48 @@
 	.settings {
 		flex: 1;
 	}
-}
 
 // === TRAFFIC === //
 
-.chartjs-render-monitor {
-	margin-left: 2vw;
-}
+	.chartjs-render-monitor {
+		margin-left: 2vw;
+	}
 
 // === DAILY AND MOBILE === //
 
-.mobile {
-	margin-bottom: 2vw;
-}
+	.mobile {
+		margin-bottom: 2vw;
+	}
 
-.dailyTraffic {
-	border-right: solid 1px $color-border;
-}
+	.dailyTraffic {
+		border-right: solid 1px $color-border;
+	}
 
 // === WIDGETS === //
 
-.widget-container {
-    width: 75%;
-    margin-left: 7vw;
+	.widget-container {
+		width: 75%;
+		margin-left: 7vw;
+	}
+
+// === SETTINGS === //
+	.notifications {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.notifications p {
+		width: 50%;
+    	margin-top: 10px;
+	}
+
+	select[id='timezone'] {
+		width: 85%;
+		margin-left: 4vw;
+	  }
+
+	 .settings-button {
+		margin-left: 4vw;
+	 } 
+
 }
