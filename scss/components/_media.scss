@@ -2,8 +2,24 @@
 /*              MEDIA QUERIES                    */
 /* ============================================= */
 
+@media (min-width: 768px){
 
-@media (min-width: 768px) {
+	.searchBar::after {
+		position: absolute;
+		right: 65px;
+		top: 144px;
+	}
+
+	.button-footer {
+		width: 45%;
+	}
+
+	.imgProfile {
+		display: grid;
+	  }
+}
+
+@media (min-width: 1024px) {
 
  // === BODY === //
 	body {
@@ -51,7 +67,7 @@
 	.searchBar::after {
 		position: absolute;
 		right: 87px;
-		top: 96px;
+		top: 91px;
 	}
 
 	.alert-banner-close {
@@ -88,7 +104,9 @@
 	}
 // === FOOTER === //
 
-
+.button-footer {
+	width: 30%;
+}
 // === TRAFFIC === //
 
 	.chartjs-render-monitor {

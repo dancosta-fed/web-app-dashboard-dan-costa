@@ -729,6 +729,10 @@ nav a.active:before {
   font-size: 0.85em;
 }
 
+.membersWrap {
+  padding-bottom: 30px;
+}
+
 /* ============================================= */
 /*               MESSAGE USER                    */
 /* ============================================= */
@@ -868,6 +872,21 @@ select {
 /*              MEDIA QUERIES                    */
 /* ============================================= */
 @media (min-width: 768px) {
+  .searchBar::after {
+    position: absolute;
+    right: 65px;
+    top: 144px;
+  }
+
+  .button-footer {
+    width: 45%;
+  }
+
+  .imgProfile {
+    display: grid;
+  }
+}
+@media (min-width: 1024px) {
   body {
     grid-area: body;
     display: grid;
@@ -906,7 +925,7 @@ select {
   .searchBar::after {
     position: absolute;
     right: 87px;
-    top: 96px;
+    top: 91px;
   }
 
   .alert-banner-close {
@@ -940,6 +959,10 @@ select {
 .messageUser,
 .settings {
     flex: 1;
+  }
+
+  .button-footer {
+    width: 30%;
   }
 
   .chartjs-render-monitor {
