@@ -446,7 +446,7 @@ header {
 .profile-img {
   display: flex;
   justify-content: flex-end;
-  margin-right: 25px;
+  margin-right: 4px;
 }
 
 .imgProfile {
@@ -455,7 +455,6 @@ header {
 
 .profileName {
   align-self: center;
-  margin-left: 5%;
   color: #fff;
 }
 
@@ -484,6 +483,59 @@ footer {
   grid-area: footer;
   display: grid;
   margin-top: 10px;
+}
+
+.bell {
+  align-self: center;
+  transition: 0.4s ease-in;
+}
+.bell:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.notification-bell {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #81c98f;
+  position: absolute;
+  left: 245px;
+  top: 23px;
+}
+
+.notificationMessages {
+  cursor: initial;
+  display: block;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 53px;
+  right: -88px;
+  font-weight: bold;
+  font-size: 17px;
+}
+.notificationMessages li {
+  display: flex;
+  justify-content: space-between;
+  background: #fbfbfb;
+  border: 3px solid #81c98f;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.notificationMessages li:hover {
+  background: #e2e3f6;
+}
+
+.deleteNotification {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.deleteNotification:hover {
+  color: #ff0000;
 }
 
 /* ============================================= */
@@ -594,7 +646,7 @@ nav a.active:before {
   -webkit-font-smoothing: antialiased;
   position: absolute;
   right: 30px;
-  top: 163px;
+  top: 145px;
 }
 
 /* ============================================= */
@@ -653,9 +705,6 @@ nav a.active:before {
   cursor: pointer;
 }
 
-/* ============================================= */
-/*                 Daily/Mobile                  */
-/* ============================================= */
 /* ============================================= */
 /*                 Social Stats                  */
 /* ============================================= */
@@ -859,16 +908,6 @@ select {
 }
 
 /* ============================================= */
-/*                    SVG                        */
-/* ============================================= */
-.bell {
-  align-self: center;
-}
-.bell:hover {
-  cursor: pointer;
-}
-
-/* ============================================= */
 /*              MEDIA QUERIES                    */
 /* ============================================= */
 @media (min-width: 768px) {
@@ -885,6 +924,16 @@ select {
   .imgProfile {
     display: grid;
   }
+
+  .notification-bell {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #81c98f;
+    position: absolute;
+    left: 507px;
+    top: 11px;
+  }
 }
 @media (min-width: 1024px) {
   body {
@@ -899,6 +948,12 @@ select {
     display: grid;
     grid-template-columns: 2fr auto 0.5fr;
     grid-template-rows: auto;
+  }
+
+  .profileName {
+    align-self: center;
+    margin-left: 5%;
+    color: #fff;
   }
 
   nav {
@@ -917,6 +972,16 @@ select {
     display: grid;
   }
 
+  .notification-bell {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #81c98f;
+    position: absolute;
+    left: 807px;
+    top: 9px;
+  }
+
   .searchBar {
     margin-left: 55vw;
     margin-right: 3vw;
@@ -924,8 +989,8 @@ select {
 
   .searchBar::after {
     position: absolute;
-    right: 87px;
-    top: 91px;
+    right: 56px;
+    top: 88px;
   }
 
   .alert-banner-close {
@@ -965,10 +1030,6 @@ select {
     width: 30%;
   }
 
-  .chartjs-render-monitor {
-    margin-left: 2vw;
-  }
-
   .mobile {
     margin-bottom: 2vw;
   }
@@ -999,6 +1060,23 @@ select {
 
   .settings-button {
     margin-left: 4vw;
+  }
+}
+@media (min-width: 1044px) {
+  .notification-bell {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #81c98f;
+    position: absolute;
+    left: 1141px;
+    top: 11px;
+  }
+
+  .searchBar::after {
+    position: absolute;
+    right: 80px;
+    top: 96px;
   }
 }
 /*

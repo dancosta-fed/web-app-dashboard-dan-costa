@@ -35,7 +35,7 @@ header {
 .profile-img {
     display: flex;
     justify-content: flex-end;
-    margin-right: 25px;
+    margin-right: 4px;
   }
 
   .imgProfile {
@@ -44,7 +44,6 @@ header {
 
 .profileName {
     align-self: center;
-    margin-left: 5%;
     color: $color-main;
 }
 
@@ -69,11 +68,77 @@ a {
     color: $color-primary;
 }
 
+
 footer {
     grid-area: footer;
     display: grid;
     margin-top: 10px;
 }
+
+// --- bell --- // 
+
+.bell {
+    align-self: center;
+    transition: .4s ease-in;
+    
+    
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        // * Change the colour when hover over it (fill it with #fff) ===I think I'll have to create another SVG filled with white * //
+    }
+}
+
+.notification-bell {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-hover;
+    position: absolute;
+    left: 245px;
+    top: 23px;
+}
+
+
+.notificationMessages {
+    cursor: initial;
+    display: block;
+    width: 300px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 53px;
+    right: -88px;
+    font-weight: bold;
+    font-size: 17px;
+
+
+    & li {
+        display: flex;
+        justify-content: space-between;
+        background: $color-dashboard;
+        border: 3px solid $color-hover;
+        border-radius: 4px;
+        margin-top: 5px;
+
+        &:hover {
+            background: $color-primary-light;
+        }
+    }
+}
+
+.deleteNotification {
+    cursor: pointer;
+    margin-right: 10px;
+
+    &:hover {
+        color: $color-alert;
+    }
+}
+
+
 
 /* ============================================= */
 /*                    NAV                        */
@@ -192,7 +257,7 @@ nav {
 
     position: absolute;
     right: 30px;
-    top: 163px;
+    top: 145px;
 }
 
 /* ============================================= */
@@ -253,11 +318,6 @@ nav {
         cursor: pointer;
     }
 }
-
-/* ============================================= */
-/*                 Daily/Mobile                  */
-/* ============================================= */
-
 
 /* ============================================= */
 /*                 Social Stats                  */
@@ -470,22 +530,4 @@ select {
     padding: 0.5rem;
     padding-right: 0.5rem;
     padding-right: 2rem;
-}
-
-// ==== FOOTER ==== //
-
-
-/* ============================================= */
-/*                    SVG                        */
-/* ============================================= */
-
-// --- bell --- // 
-
-.bell {
-    align-self: center;
-    
-    &:hover{
-        cursor: pointer;
-        // * Change the colour when hover over it (fill it with #fff) ===I think I'll have to create another SVG filled with white * //
-    }
 }

@@ -4,7 +4,7 @@ const alertBanner = document.getElementById('alert');
 // content into DOM
 alertBanner.innerHTML = `
     <div class="alert-banner">
-        <p class="alert-banner-text"><strong class="alertB">ATTENTION: </strong> You have 10 new messages. Don't forget to read and reply them. Don't let your collegues waiting!</p>
+        <p class="alert-banner-text"><strong class="alertB">ATTENTION: </strong> You have 4 new messages. Don't forget to read and reply them. Don't let your collegues waiting!</p>
         <p><strong class="alert-banner-close">X</strong></p> 
     </div> 
 `
@@ -17,6 +17,59 @@ alertBanner.addEventListener('click', e => {
     }
 );
 
+  // BELL NOTIFICATIONS
+
+  const bell = document.querySelector('.bell');
+  const bellNotification = document.querySelector('.notification-bell');
+  const ulNotification = document.querySelector('ul');
+  const itemNotification = document.getElementsByClassName('deleteNotification');
+  
+  ulNotification.innerHTML = `<li> 
+    <p>You have 4 unread message</p>
+    <p class="deleteNotification">x</p>
+    </li>
+    <li>
+    <p>We have tried to contact you...</p>
+    <p class="deleteNotification">x</p>
+    </li>
+    <li>
+    <p>You need an upgrade</p>
+    <p class="deleteNotification">x</p>
+    </li>
+    <li>
+    <p>You have 1 new Job Offer</p>
+    <p class="deleteNotification">x</p>
+    </li>`
+
+
+    // Hiding notifications Before
+    function hideNotifications() {
+        ulNotification.style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', hideNotifications());
+    
+    // Loading notifications if the bell is clicked
+    bell.addEventListener('click', () => {
+        if (ulNotification.style.display = 'none') {
+            ulNotification.style.display = 'block';
+        }
+    });
+
+    // deleting notifications
+
+    for (let i = 0; i < itemNotification.length; i++) {
+        itemNotification[i].addEventListener('click', (e) => {
+            if (e.target.tagName === 'P') {
+                e.target.parentNode.remove();
+            }
+
+            if (ulNotification.children.length < 1) {
+                bellNotification.style.display = 'none';
+            }
+
+        });
+    }
 
 // === CHART WIDGETS === //
 
@@ -43,8 +96,8 @@ function activate_chart (labels, data){
       labels: labels,
       datasets: [{
       data: data,
-      backgroundColor: '#7477bf',
-      borderWidth: 1,
+      backgroundColor: '#8f92d6',
+      borderWidth: 2,
       borderColor: '#fff',
       
       

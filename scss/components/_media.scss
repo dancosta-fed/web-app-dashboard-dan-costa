@@ -17,6 +17,16 @@
 	.imgProfile {
 		display: grid;
 	  }
+
+	.notification-bell {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $color-hover;
+		position: absolute;
+		left: 507px;
+		top: 11px;
+	}  
 }
 
 @media (min-width: 1024px) {
@@ -41,6 +51,12 @@
 		grid-template-rows: auto;
 	}
 
+	.profileName {
+		align-self: center;
+		margin-left: 5%;
+		color: $color-main;
+	}
+
 	nav {
 		grid-area: navagation;
 		display: flex;
@@ -57,6 +73,17 @@
 		display: grid;
 	  }
 	  
+	.notification-bell {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $color-hover;
+		position: absolute;
+		left: 807px;
+		top: 9px;
+	}
+  
+	  
 	 // === MAIN === //
 
 	  .searchBar {
@@ -66,8 +93,8 @@
 
 	.searchBar::after {
 		position: absolute;
-		right: 87px;
-		top: 91px;
+		right: 56px;
+		top: 88px;
 	}
 
 	.alert-banner-close {
@@ -109,9 +136,9 @@
 }
 // === TRAFFIC === //
 
-	.chartjs-render-monitor {
-		margin-left: 2vw;
-	}
+	// .chartjs-render-monitor {
+	// 	margin-left: 2vw;
+	// }
 
 // === DAILY AND MOBILE === //
 
@@ -150,4 +177,27 @@
 		margin-left: 4vw;
 	 } 
 
+}
+
+@media (min-width: 1044px) {
+
+ // header
+
+	.notification-bell {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: $color-hover;
+		position: absolute;
+		left: 1141px;
+		top: 11px;
+	}
+
+// main	
+
+	.searchBar::after {
+		position: absolute;
+		right: 80px;
+		top: 96px;
+	}
 }
