@@ -263,3 +263,21 @@ let mobileChart = new Chart(mobileCanvas, {
             alert(`Message has been succesfully sent to ${user.value}`);
         }
     });
+
+    // Autocomplete search
+    // --- using a jQuery --- // 
+
+    $(function() {
+        var membersNames = [
+          "Mel Chambers",
+          "Dale Byrd",
+          "Mark Mcloving",
+          "Dan Costa"
+        ];
+        $( "#userField" ).autocomplete({
+          source: membersNames
+        });
+      } );
+
+
+    

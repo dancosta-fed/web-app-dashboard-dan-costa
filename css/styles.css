@@ -487,11 +487,11 @@ footer {
 
 .bell {
   align-self: center;
-  transition: 0.4s ease-in;
+  height: 40px;
+  width: 26px;
 }
 .bell:hover {
   cursor: pointer;
-  transform: scale(1.2);
 }
 
 .notification-bell {
@@ -502,7 +502,7 @@ footer {
   background-color: #81c98f;
   position: absolute;
   left: 245px;
-  top: 23px;
+  top: 12px;
 }
 
 .notificationMessages {
@@ -701,7 +701,6 @@ nav a.active:before {
   background-color: #81c98f;
   color: #fff;
   border-radius: 15%;
-  padding: 1px 5px;
   cursor: pointer;
 }
 
@@ -823,6 +822,42 @@ textarea[id=messageField] {
 }
 
 /* ============================================= */
+/*                  AUTOCOMPLETE                 */
+/* ============================================= */
+.ui-corner-all {
+  -moz-border-radius: 4px 4px 4px 4px;
+}
+
+.ui-widget-content {
+  border: 2px solid #ededed;
+  color: #4d4c72;
+  background-color: #fbfbfb;
+}
+
+.ui-widget {
+  font-family: Montserrat, Roboto;
+  font-size: 15px;
+}
+
+.ui-menu {
+  display: block;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 2px;
+}
+
+.ui-autocomplete {
+  cursor: pointer;
+  position: absolute;
+}
+
+.ui-menu-item:hover {
+  background-color: #e2e3f6;
+  color: #fbfbfb;
+}
+
+/* ============================================= */
 /*                  SETTINGS                     */
 /* ============================================= */
 .settings {
@@ -930,6 +965,11 @@ select {
     display: grid;
   }
 
+  .bell {
+    margin-top: -1px;
+    margin-right: 5px;
+  }
+
   .notification-bell {
     width: 10px;
     height: 10px;
@@ -975,6 +1015,11 @@ select {
 
   .imgProfile {
     display: grid;
+  }
+
+  .bell {
+    margin-top: -2px;
+    margin-right: 6px;
   }
 
   .notification-bell {

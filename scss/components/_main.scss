@@ -79,13 +79,11 @@ footer {
 
 .bell {
     align-self: center;
-    transition: .4s ease-in;
-    
+    height: 40px;
+    width: 26px;
     
     &:hover{
         cursor: pointer;
-        transform: scale(1.2);
-        // * Change the colour when hover over it (fill it with #fff) ===I think I'll have to create another SVG filled with white * //
     }
 }
 
@@ -97,7 +95,7 @@ footer {
     background-color: $color-hover;
     position: absolute;
     left: 245px;
-    top: 23px;
+    top: 12px;
 }
 
 
@@ -314,9 +312,9 @@ nav {
         background-color: $color-hover;
         color: $color-main;
         border-radius: 15%;
-        padding: 1px 5px;
         cursor: pointer;
     }
+
 }
 
 /* ============================================= */
@@ -438,6 +436,46 @@ textarea[id='messageField'] {
 
 .messageUser{
     border-right: solid 1px $color-border;
+}
+
+/* ============================================= */
+/*                  AUTOCOMPLETE                 */
+/* ============================================= */
+
+
+
+.ui-corner-all
+{
+    -moz-border-radius: 4px 4px 4px 4px;
+}
+.ui-widget-content
+{
+    border: 2px solid $color-border;
+    color: $complement;
+    background-color:$color-dashboard
+}
+.ui-widget
+{
+    font-family: $basefont;
+    font-size: 15px;
+}
+.ui-menu
+{
+    display: block;
+    float: left;
+    list-style: none outside none;
+    margin: 0;
+    padding: 2px;
+}
+.ui-autocomplete
+{
+    cursor: pointer;
+    position: absolute;
+}
+
+.ui-menu-item:hover{
+    background-color: $color-primary-light;
+    color: $color-dashboard;
 }
 /* ============================================= */
 /*                  SETTINGS                     */
