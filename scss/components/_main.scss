@@ -381,6 +381,12 @@ nav {
     flex-grow: 2;
 }
 
+.activity-container:hover {
+    cursor: pointer;
+    background-color: $color-primary-light;
+}
+
+
 .pMember {
     margin: 0;
 }

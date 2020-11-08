@@ -765,6 +765,11 @@ nav a.active:before {
   flex-grow: 2;
 }
 
+.activity-container:hover {
+  cursor: pointer;
+  background-color: #e2e3f6;
+}
+
 .pMember {
   margin: 0;
 }
