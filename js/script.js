@@ -284,6 +284,7 @@ let mobileChart = new Chart(mobileCanvas, {
 
 //LOCAL STORAGE
 
+// Done following John Skeen Office-Hours on the Slack Community : https://treehouse-fewd-102.slack.com/archives/CBPTF1WJK/p1605192551215000
   const emailNotification = document.getElementById('emailNotification');
   const profileToPublic = document.getElementById('profileToPublic');
   const timezone = document.getElementById('timezone');
