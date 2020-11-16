@@ -524,7 +524,9 @@ select[id='timezone'] {
 /*                    BUTTONS                    */
 /* ============================================= */
 
-button[id='btn'] {
+button[id='btn'],
+button[id='btnSave'],
+button[id='btnCancel']{
     padding: 5px 0;
     color: $color-main;
     border: none;
@@ -536,6 +538,7 @@ button[id='btn'] {
     }
 }
 
+
 .send {
     background-color: $color-primary;
     width: 100%;
@@ -544,12 +547,12 @@ button[id='btn'] {
     margin-left: 10vw;
  } 
 
-.button-primary {
+.saveBtn {
     width: 40%;
     margin-top: 10px;
     background-color: $color-primary;
 }
-.button-disabled {
+.cancelBtn {
     width: 40%;
     margin-top: 10px;
     background-color: $color-switchbtn;

@@ -894,13 +894,17 @@ select[id=timezone]:hover {
 /* ============================================= */
 /*                    BUTTONS                    */
 /* ============================================= */
-button[id=btn] {
+button[id=btn],
+button[id=btnSave],
+button[id=btnCancel] {
   padding: 5px 0;
   color: #fff;
   border: none;
   border-radius: 4px;
 }
-button[id=btn]:hover {
+button[id=btn]:hover,
+button[id=btnSave]:hover,
+button[id=btnCancel]:hover {
   cursor: pointer;
   color: #e2e3f6;
 }
@@ -914,13 +918,13 @@ button[id=btn]:hover {
   margin-left: 10vw;
 }
 
-.button-primary {
+.saveBtn {
   width: 40%;
   margin-top: 10px;
   background-color: #7477bf;
 }
 
-.button-disabled {
+.cancelBtn {
   width: 40%;
   margin-top: 10px;
   background-color: #b2b2b2;
@@ -1529,7 +1533,7 @@ select {
 
   .switch-ios.switch-light > span span:first-of-type {
     opacity: 1;
-    padding-left: -0.15em;
+    padding-left: 0.15em;
   }
 
   .switch-ios.switch-light > span span:last-of-type {
@@ -1539,7 +1543,7 @@ select {
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
     border-color: #7477bf;
-    margin-left: -2em;
+    margin-left: 2em;
   }
 
   .switch-ios.switch-light input:checked ~ span {

@@ -287,8 +287,8 @@ let mobileChart = new Chart(mobileCanvas, {
   const emailNotification = document.getElementById('emailNotification');
   const profileToPublic = document.getElementById('profileToPublic');
   const timezone = document.getElementById('timezone');
-  const saveBtn = document.getElementsByClassName('.saveBtn');
-  const cancelBtn = document.getElementsByClassName('.cancelBtn');
+  const saveBtn = document.querySelector('.saveBtn');
+  const cancelBtn = document.querySelector('.cancelBtn');
 
 // See if local storage is available to use
 
@@ -303,26 +303,51 @@ function testStorage() {
      }
    }
 
+   // Validates if the settings are set
+const loadSettings = function() {
+    if (emailNotification !== 'false') {
+        emailNotification.checked = (emailNotification === 'true');
+    }
+    if (profileToPublic !== 'false') {
+        profileToPublic.checked = (profileToPublic === 'true');
+    }
+    if (timezone !== 'false') {
+        select.value = localStorage.getItem('timezone'); 
+    }
+};
+
+console.log(loadSettings);
+
    if(testStorage() === true){ 
 
+    // Setting the Save Button to save the users choice
         saveBtn.addEventListener('click', () => {
             // creating Items
                 localStorage.setItem('emailNotification', emailNotification.checked);
                 localStorage.setItem('profileToPublic', profileToPublic.checked);
-
+                
+                selectedTZone = timezone.options[timezone.selectedIndex].value;
+            // creating Items    
+                localStorage.setItem('timezone', selectedTZone);
 
                 // changes alert
                 alert("You're settings are successfully saved!");
         });
    
- }
+ 
+
+        // Setting the Cancel Button to go back to default
+        cancelBtn.addEventListener('click', () => {
+            const cancel = confirm("Click 'OK' to cancel changes!");
+
+            if (cancel) {
+                localStorage.setItem('emailNotification', emailNotification.checked = false);
+                localStorage.setItem('profileToPublic', profileToPublic.checked = false);
+                localStorage.setItem('timezone', timezone.selectedIndex = timezone.options[0].value);
+            }
+        });
+
+}
 
 
-console.log();
-
-// // clear items when Cancel btn is clicked
-// cancel.addEventListener("click", () => {
-//   event.preventDefault();
-//   localStorage.clear();
-// });
     
