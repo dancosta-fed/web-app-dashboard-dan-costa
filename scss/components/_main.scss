@@ -425,7 +425,7 @@ input[id='userField']{
 }
 
 textarea[id='messageField'] {
-    height: 8vw;
+    height: 100px;
     margin-bottom: 15px;
 }
 
@@ -442,7 +442,7 @@ textarea[id='messageField'] {
 /*                  AUTOCOMPLETE                 */
 /* ============================================= */
 
-
+// Source for the code: https://www.codeproject.com/articles/667391/jquery-autocomplete-custom-styling //
 
 .ui-corner-all
 {

@@ -265,7 +265,7 @@ let mobileChart = new Chart(mobileCanvas, {
     });
 
     // Autocomplete search
-    // --- using a jQuery --- // 
+    // * --- using a jQuery. The source: https://jqueryui.com/autocomplete --- *// 
 
     $(function() {
         var membersNames = [
@@ -277,7 +277,52 @@ let mobileChart = new Chart(mobileCanvas, {
         $( "#userField" ).autocomplete({
           source: membersNames
         });
+
       } );
 
+// ========== Messaging ========== //
 
+//LOCAL STORAGE
+
+  const emailNotification = document.getElementById('emailNotification');
+  const profileToPublic = document.getElementById('profileToPublic');
+  const timezone = document.getElementById('timezone');
+  const saveBtn = document.getElementsByClassName('.saveBtn');
+  const cancelBtn = document.getElementsByClassName('.cancelBtn');
+
+// See if local storage is available to use
+
+function testStorage() {
+    const test = 'test';
+       try {
+         localStorage.setItem(test, test);
+         localStorage.removeItem(test);
+         return true;
+       } catch(e) {
+         return false;
+     }
+   }
+
+   if(testStorage() === true){ 
+
+        saveBtn.addEventListener('click', () => {
+            // creating Items
+                localStorage.setItem('emailNotification', emailNotification.checked);
+                localStorage.setItem('profileToPublic', profileToPublic.checked);
+
+
+                // changes alert
+                alert("You're settings are successfully saved!");
+        });
+   
+ }
+
+
+console.log();
+
+// // clear items when Cancel btn is clicked
+// cancel.addEventListener("click", () => {
+//   event.preventDefault();
+//   localStorage.clear();
+// });
     

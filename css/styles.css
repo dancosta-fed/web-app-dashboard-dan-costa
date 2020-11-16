@@ -808,7 +808,7 @@ input[id=userField] {
 }
 
 textarea[id=messageField] {
-  height: 8vw;
+  height: 100px;
   margin-bottom: 15px;
 }
 
