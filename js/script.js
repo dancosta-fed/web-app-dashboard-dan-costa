@@ -304,20 +304,29 @@ function testStorage() {
      }
    }
 
+//    // Validates if the settings are set
+// const loadSettings = function() {
+//     if (emailNotification !== 'false') {
+//         emailNotification.checked = (emailNotification === 'true');
+//     }
+//     if (profileToPublic !== 'false') {
+//         profileToPublic.checked = (profileToPublic === 'true');
+//     }
+//     if (timezone !== 'false') {
+//         timezone.value = localStorage.getItem('timezone'); 
+//     }
+// };
+
    // Validates if the settings are set
 const loadSettings = function() {
-    if (emailNotification !== 'false') {
-        emailNotification.checked = (emailNotification === 'true');
-    }
-    if (profileToPublic !== 'false') {
-        profileToPublic.checked = (profileToPublic === 'true');
-    }
-    if (timezone !== 'false') {
-        select.value = localStorage.getItem('timezone'); 
-    }
+    emailNotification.checked = JSON.parse(localStorage.getItem('emailNotification'));
+    profileToPublic.checked = JSON.parse(localStorage.getItem('profileToPublic'));
+    timezone.value = localStorage.getItem('timezone'); 
 };
+    loadSettings();
 
-console.log(loadSettings);
+
+
 
    if(testStorage() === true){ 
 

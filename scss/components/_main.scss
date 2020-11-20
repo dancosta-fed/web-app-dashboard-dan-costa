@@ -2,7 +2,7 @@
 /*                   Body                        */
 /* ============================================= */
 
-// ---- Mobile first approach 375px
+// ---- Mobile first approach 320px
 
 body {
     grid-area: body;
@@ -30,11 +30,12 @@ header {
     color: $color-main;
     margin: .5em .2em;
     align-self: center;
+    font-size: 1em;
 }
 
 .profile-img {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: 4px;
   }
 
@@ -45,6 +46,7 @@ header {
 .profileName {
     align-self: center;
     color: $color-main;
+    font-size: 1em;
 }
 
 main {
@@ -53,11 +55,11 @@ main {
 }
 
 .widget-container-full {
-    width: 90vw;
+    width: 95vw;
 }
 
 .widget-container-half {
-    width: 90vw;
+    width: 95vw;
 }
 
 h3 {
@@ -68,6 +70,14 @@ a {
     color: $color-primary;
 }
 
+.recentActivity,
+.membersWrap,
+.newMembers,
+.socialWrap,
+.traffic 
+ {
+    width: 320px;
+}
 
 footer {
     grid-area: footer;
@@ -87,6 +97,12 @@ footer {
     }
 }
 
+.bellIcon {
+    height: 40px;
+    width: 26px;
+    position: relative;
+}
+
 .notification-bell {
     cursor: pointer;
     width: 10px;
@@ -94,10 +110,14 @@ footer {
     border-radius: 50%;
     background-color: $color-hover;
     position: absolute;
-    left: 245px;
+    left: 210px;
     top: 12px;
-}
 
+    &:hover {
+        background-color: $color-main;
+        transition: 1s ease-in;
+    }
+}
 
 .notificationMessages {
     cursor: initial;
@@ -136,6 +156,18 @@ footer {
     }
 }
 
+// Animation
+
+@keyframes sideToSide {
+    10% {transform: rotate(-18deg);}
+    20% {transform: rotate(-38deg);}
+    90% {transform: rotate(30deg);}
+    100% {transform: rotate(0);}
+}
+
+.bellIcon:hover {
+    animation: sideToSide .8s ease-in-out;
+}
 
 
 /* ============================================= */
@@ -183,18 +215,20 @@ nav {
 
 .dashSearch {
     display: grid;
-    grid-template-columns: .2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     'dashboard search';
     align-items: center;
     margin-bottom: 10px;
+    width: 320px;
 }
 
 .dashboard {
     grid-area: dashboard;
     margin-right: 5vw;
     margin-left: 2vw;
+    font-size: 1em;
 }
 .dashboardSearch{
     grid-area: search;
@@ -209,7 +243,7 @@ nav {
 
     input[type='search'] {
         margin-left: auto;
-        width: 90%;
+        width: 70%;
         height: 50%;
         align-self: center;
     }
@@ -254,8 +288,8 @@ nav {
     -webkit-font-smoothing: antialiased;
 
     position: absolute;
-    right: 30px;
-    top: 145px;
+    right: 63px;
+    top: 124px;
 }
 
 /* ============================================= */
@@ -265,8 +299,9 @@ nav {
 .alert-banner {
     margin-top: 2vw;
     margin-left: 1vw;
-    max-width: 95%;
-    border: solid 1px #ccc;
+    margin-right: 1vw;
+    width: 320px;
+    border: solid 1px $color-switchbtn;
     border-radius: 10px;
     display: flex;
     background-color: $color-primary;
@@ -280,7 +315,7 @@ nav {
 }
 
 .alert-banner-close {
-    margin-right: 3vw;
+    margin-right: 2vw;
     color: $color-main;
 
     &:hover{
@@ -300,8 +335,8 @@ nav {
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
-    margin-right: 7%;
     margin-bottom: 2%;
+    font-size: .8em;
 }
 
 .trafficNav-link {
@@ -394,8 +429,8 @@ nav {
 }
 
 .activityDate {
-    margin-right: 20px;
     font-size: .85em;
+
 }
 
 .membersWrap {
