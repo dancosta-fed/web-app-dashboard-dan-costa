@@ -76,7 +76,7 @@ a {
 .socialWrap,
 .traffic 
  {
-    width: 320px;
+    // width: 320px;
 }
 
 footer {
@@ -91,14 +91,14 @@ footer {
     align-self: center;
     height: 40px;
     width: 26px;
-    
+    position: relative;
     &:hover{
         cursor: pointer;
     }
 }
 
 .bellIcon {
-    height: 40px;
+    height: 34px;
     width: 26px;
     position: relative;
 }
@@ -110,8 +110,8 @@ footer {
     border-radius: 50%;
     background-color: $color-hover;
     position: absolute;
-    left: 210px;
-    top: 12px;
+    right: 0;
+    top: 0;
 
     &:hover {
         background-color: $color-main;
@@ -214,14 +214,10 @@ nav {
 
 
 .dashSearch {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    'dashboard search';
-    align-items: center;
-    margin-bottom: 10px;
-    width: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
 }
 
 .dashboard {
@@ -233,19 +229,21 @@ nav {
 .dashboardSearch{
     grid-area: search;
     height: 100%;
-    width: 100%;
+    width: 90%;
     align-content: center;
     justify-content: end;
     background-color: $color-dashboard;
     display: flex;
     border-left: solid 1px $color-border;
     border-bottom: solid 1px $color-border;
+    margin-top: 10px;
 
     input[type='search'] {
         margin-left: auto;
         width: 90%;
         height: 50%;
         align-self: center;
+        margin-bottom: 5px;
     }
 }
 
@@ -288,7 +286,7 @@ nav {
     -webkit-font-smoothing: antialiased;
 
     position: absolute;
-    right: 30px;
+    right: 28px;
     top: 124px;
 }
 
@@ -297,9 +295,7 @@ nav {
 /* ============================================= */
 
 .alert-banner {
-    margin-top: 2vw;
-    margin-left: 5vw;
-    margin-right: 1vw;
+    margin: 0 auto;
     width: 90%;
     border: solid 1px $color-switchbtn;
     border-radius: 10px;
@@ -334,6 +330,7 @@ nav {
 .trafficNav {
     display: flex;
     list-style-type: none;
+    padding: 0;
     justify-content: flex-end;
     margin-bottom: 2%;
     font-size: .8em;

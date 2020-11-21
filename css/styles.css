@@ -481,14 +481,6 @@ a {
   color: #7477bf;
 }
 
-.recentActivity,
-.membersWrap,
-.newMembers,
-.socialWrap,
-.traffic {
-  width: 320px;
-}
-
 footer {
   grid-area: footer;
   display: grid;
@@ -499,13 +491,14 @@ footer {
   align-self: center;
   height: 40px;
   width: 26px;
+  position: relative;
 }
 .bell:hover {
   cursor: pointer;
 }
 
 .bellIcon {
-  height: 40px;
+  height: 34px;
   width: 26px;
   position: relative;
 }
@@ -517,8 +510,8 @@ footer {
   border-radius: 50%;
   background-color: #81c98f;
   position: absolute;
-  left: 210px;
-  top: 12px;
+  right: 0;
+  top: 0;
 }
 .notification-bell:hover {
   background-color: #fff;
@@ -617,13 +610,10 @@ nav a.active:before {
 /*              Dashboard/Search                 */
 /* ============================================= */
 .dashSearch {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "dashboard search";
-  align-items: center;
-  margin-bottom: 10px;
-  width: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
 }
 
 .dashboard {
@@ -636,19 +626,21 @@ nav a.active:before {
 .dashboardSearch {
   grid-area: search;
   height: 100%;
-  width: 100%;
+  width: 90%;
   align-content: center;
   justify-content: end;
   background-color: #fbfbfb;
   display: flex;
   border-left: solid 1px #ededed;
   border-bottom: solid 1px #ededed;
+  margin-top: 10px;
 }
 .dashboardSearch input[type=search] {
   margin-left: auto;
   width: 90%;
   height: 50%;
   align-self: center;
+  margin-bottom: 5px;
 }
 
 .searchBar1 {
@@ -685,7 +677,7 @@ nav a.active:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   position: absolute;
-  right: 30px;
+  right: 28px;
   top: 124px;
 }
 
@@ -693,9 +685,7 @@ nav a.active:before {
 /*                 Alert Banner                  */
 /* ============================================= */
 .alert-banner {
-  margin-top: 2vw;
-  margin-left: 5vw;
-  margin-right: 1vw;
+  margin: 0 auto;
   width: 90%;
   border: solid 1px #b2b2b2;
   border-radius: 10px;
@@ -729,6 +719,7 @@ nav a.active:before {
 .trafficNav {
   display: flex;
   list-style-type: none;
+  padding: 0;
   justify-content: flex-end;
   margin-bottom: 2%;
   font-size: 0.8em;
@@ -996,41 +987,30 @@ select {
 /* ============================================= */
 @media (min-width: 768px) {
   .recentActivity,
-.membersWrap,
 .newMembers,
-.socialWrap,
 .traffic {
-    width: 768px;
+    width: 100%;
   }
 
   .trafficNav {
+    padding: 0;
     margin-right: 40px;
     font-size: 1em;
   }
 
   .alert-banner {
-    width: auto;
-    margin-left: 3vw;
-    margin-right: 3vw;
-  }
-
-  .dashboardSearch {
-    margin-left: 2vw;
+    margin: 0 auto;
   }
 
   .dashboardSearch input[type=search] {
-    margin-left: 330px;
     width: auto;
     height: 50%;
-  }
-
-  .searchBar {
-    margin-left: 3vw;
+    margin-left: 305px;
   }
 
   .searchBar::after {
     position: absolute;
-    right: 27px;
+    right: 50px;
     top: 132px;
   }
 
@@ -1041,33 +1021,8 @@ select {
   .imgProfile {
     display: grid;
   }
-
-  .bell {
-    margin-top: -1px;
-    margin-right: 5px;
-  }
-
-  .bellIcon {
-    height: 36px;
-    width: 28px;
-  }
-
-  .notification-bell {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #81c98f;
-    position: absolute;
-    left: 506px;
-    top: 12px;
-  }
 }
 @media (min-width: 1024px) {
-  header,
-main {
-    width: 1024px;
-  }
-
   body {
     grid-area: body;
     display: grid;
@@ -1104,35 +1059,15 @@ main {
     display: grid;
   }
 
-  .bell {
-    margin-top: -2px;
-    margin-right: 6px;
-  }
-
-  .bellIcon {
-    height: 28px;
-    width: 26px;
-  }
-
-  .notification-bell {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #81c98f;
-    position: absolute;
-    left: 807px;
-    top: 9px;
-  }
-
-  .searchBar {
-    margin-left: 55vw;
-    margin-right: 3vw;
+  .dashboardSearch input[type=search] {
+    margin-left: 457px;
+    width: 32%;
   }
 
   .searchBar::after {
     position: absolute;
     right: 56px;
-    top: 88px;
+    top: 69px;
   }
 
   .alert-banner-close {
@@ -1203,13 +1138,15 @@ main {
   .settings-button {
     margin-left: 4vw;
   }
+}
+@media (min-width: 1280px) {
+  .dashboardSearch input[type=search] {
+    margin-left: 61%;
+  }
 
-  .recentActivity,
-.membersWrap,
-.newMembers,
-.socialWrap,
-.traffic {
-    width: 768px;
+  .searchBar::after {
+    right: 85px;
+    top: 85px;
   }
 }
 /*
