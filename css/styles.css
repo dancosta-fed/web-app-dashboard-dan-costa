@@ -646,7 +646,7 @@ nav a.active:before {
 }
 .dashboardSearch input[type=search] {
   margin-left: auto;
-  width: 70%;
+  width: 90%;
   height: 50%;
   align-self: center;
 }
@@ -685,7 +685,7 @@ nav a.active:before {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   position: absolute;
-  right: 63px;
+  right: 30px;
   top: 124px;
 }
 
@@ -694,9 +694,9 @@ nav a.active:before {
 /* ============================================= */
 .alert-banner {
   margin-top: 2vw;
-  margin-left: 1vw;
+  margin-left: 5vw;
   margin-right: 1vw;
-  width: 320px;
+  width: 90%;
   border: solid 1px #b2b2b2;
   border-radius: 10px;
   display: flex;

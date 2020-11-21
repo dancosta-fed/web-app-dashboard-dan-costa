@@ -243,7 +243,7 @@ nav {
 
     input[type='search'] {
         margin-left: auto;
-        width: 70%;
+        width: 90%;
         height: 50%;
         align-self: center;
     }
@@ -288,7 +288,7 @@ nav {
     -webkit-font-smoothing: antialiased;
 
     position: absolute;
-    right: 63px;
+    right: 30px;
     top: 124px;
 }
 
@@ -298,9 +298,9 @@ nav {
 
 .alert-banner {
     margin-top: 2vw;
-    margin-left: 1vw;
+    margin-left: 5vw;
     margin-right: 1vw;
-    width: 320px;
+    width: 90%;
     border: solid 1px $color-switchbtn;
     border-radius: 10px;
     display: flex;
