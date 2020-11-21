@@ -229,7 +229,7 @@ nav {
 .dashboardSearch{
     grid-area: search;
     height: 100%;
-    width: 90%;
+    // width: 90%;
     align-content: center;
     justify-content: end;
     background-color: $color-dashboard;
@@ -257,10 +257,11 @@ nav {
 }
 
 .searchBar {
-    width: 40%;
+    // width: 40%;
+    position: relative;
     align-self: center;
-    flex: 1;
-    margin-left: 5vw;
+    // flex: 1;
+    // margin-left: 5vw;
     border-radius: 3px;
     border-top: 1px;
 
@@ -286,8 +287,8 @@ nav {
     -webkit-font-smoothing: antialiased;
 
     position: absolute;
-    right: 28px;
-    top: 124px;
+    right: 30px;
+    top: 9px;
 }
 
 /* ============================================= */

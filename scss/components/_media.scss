@@ -22,15 +22,7 @@
 	}
 
 	.dashboardSearch input[type="search"] {
-		width: auto;
 		height: 50%;
-		margin-left: 305px;
-	}
-
-	.searchBar::after {
-		position: absolute;
-		right: 50px;
-		top: 132px;
 	}
 
 	.button-footer {
@@ -87,19 +79,9 @@
 		display: grid;
 	  }
 
-	  .dashboardSearch input[type="search"] {
-		margin-left: 457px;
-		width: 32%;
-	  }
   
 	  
 	 // === MAIN === //
-
-	.searchBar::after {
-		position: absolute;
-		right: 56px;
-		top: 69px;
-	}
 
 	.alert-banner-close {
 		margin: 6px 15px 6px 15px;
@@ -175,17 +157,4 @@
 	 .settings-button {
 		margin-left: 4vw;
 	 } 
-}
-
-@media (min-width: 1280px) {
-	
-	.dashboardSearch input[type="search"] {
-		margin-left: 61%;
-	}
-
-	.searchBar::after {
-		right: 85px;
-		top: 85px;
-	}
-
 }

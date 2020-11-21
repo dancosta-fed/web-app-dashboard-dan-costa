@@ -253,7 +253,7 @@ let mobileChart = new Chart(mobileCanvas, {
     send.addEventListener('click', () => {
 
         // conditional to make sure the user and message fields are not empty
-        if (user.value === '' && message.value === '') {
+        if (user.value === '' && message.value === '' ) {
             alert('Please, fill out user and message fields before sending');
         } else if (user.value === '') {
             alert('Please fill out the user field before sending');
@@ -262,6 +262,7 @@ let mobileChart = new Chart(mobileCanvas, {
         } else {
             alert(`Message has been succesfully sent to ${user.value}`);
         }
+        
     });
 
     // Autocomplete search
