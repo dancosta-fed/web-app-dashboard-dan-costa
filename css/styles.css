@@ -1010,17 +1010,27 @@ select {
 
   .alert-banner {
     width: auto;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  .dashboardSearch {
+    margin-left: 2vw;
   }
 
   .dashboardSearch input[type=search] {
-    margin-left: 348px;
+    margin-left: 330px;
     width: auto;
     height: 50%;
   }
 
+  .searchBar {
+    margin-left: 3vw;
+  }
+
   .searchBar::after {
     position: absolute;
-    right: 11px;
+    right: 27px;
     top: 132px;
   }
 
@@ -1048,8 +1058,8 @@ select {
     border-radius: 50%;
     background-color: #81c98f;
     position: absolute;
-    left: 860px;
-    top: 7px;
+    left: 506px;
+    top: 12px;
   }
 }
 @media (min-width: 1024px) {
